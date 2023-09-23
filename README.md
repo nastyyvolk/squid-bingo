@@ -9,4 +9,4 @@ npm run dev
 
 ```
 
-This game takes in an array of bingo boards and the draw nums and returns the board which is the last to win and its score
+This game takes in an array of bingo boards and the draw nums and returns the board which is the last to win and its score. 
