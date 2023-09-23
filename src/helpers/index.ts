@@ -1,9 +1,9 @@
 
-const boardSize = 5
+
 export function checkIfWon(board, i: number) {
   // check row
-  const row = Math.floor(i / boardSize)
-  const firstRowIndex = row * boardSize
+  const row = Math.floor(i / 5)
+  const firstRowIndex = row * 5
   const lastRowIndex = firstRowIndex + 4
   for (let i = firstRowIndex; i <= lastRowIndex; i++) {
     if (board[i] !== '-') break
@@ -12,8 +12,8 @@ export function checkIfWon(board, i: number) {
 
   // check column
   const column = i % 5
-  const lastColumnIndex = column + boardSize * 4
-  for(let i = column; i <= lastColumnIndex; i = i + boardSize) {
+  const lastColumnIndex = column + 5 * 4
+  for(let i = column; i <= lastColumnIndex; i = i + 5) {
     if (board[i] !== '-') break
     if (i === lastColumnIndex) return true
   }
